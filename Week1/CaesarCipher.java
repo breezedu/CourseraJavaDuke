@@ -12,11 +12,12 @@ public class CaesarCipher {
 	
 	public static void main(String[] args){
 		
-		String retStr = encrypt("FIRST LEGION ATTACK EAST FLANK!", 23);
+		//encrypt one string one key; 
+		String retStr = encrypt("Hello world!", 15);
 		
 		System.out.println("The return string: " + retStr);
 		
-		
+		//encrypt one string one key
 		FileResource fr = new FileResource();
 		String message = fr.asString();
 		message = "First Legion";
@@ -28,7 +29,8 @@ public class CaesarCipher {
 		
 		
 		//encrypt two keys
-		System.out.println(encryptTwoKeys("First Legion", 23, 17));
+		String str2keys = "At noon be in the conference room with your hat on for a surprise party. YELL LOUD!";
+		System.out.println(encryptTwoKeys(str2keys, 8, 21));
 		
 	}//end main()
 
@@ -80,10 +82,10 @@ public class CaesarCipher {
 			
 			retStr += str1.charAt(str1.length() - 1);
 			
-		}
+		}//end if-else conditions; 
 		
 		return retStr;
-	}
+	}//end encryptTwoKeys() method;
 
 
 	/*************************************************
